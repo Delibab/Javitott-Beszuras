@@ -4,8 +4,9 @@ import java.util.Random;
 
 public class TovabbfejlesztettBeszurorendezes {
     public static final Random r = new Random();
+    
     public static void main(String[] args) {
-        int[] tomb = randomTomb(10, 1, 11);
+        int[] tomb = randomTomb(10, 1, 10);
         javitottBeszuras(tomb);
         for (int i = 0; i < tomb.length; i++) {
             System.out.println(tomb[i]);
@@ -31,7 +32,7 @@ public class TovabbfejlesztettBeszurorendezes {
         int tomb[] = new int[hossz];
 
         for (int i = 0; i < hossz; i++) {
-            tomb[i] = r.nextInt(min, max);
+            tomb[i] = r.nextInt(min, max+1);
         }
         return tomb;
     }
